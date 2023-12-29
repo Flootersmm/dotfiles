@@ -23,8 +23,20 @@ set $term konsole
 # on the original workspace that the command was run on.
 set $menu fuzzel
 
+# Set dark theme for apps to detect 
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' 
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec darkman run
+exec darkman set dark
+
 # Start Volnoti for volume notifications
 exec volnoti
+
+# Start SwayNotificationCenter
+exec swaync
+
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Startup configuration
 exec swaymsg "workspace 4; exec spotify"
@@ -236,15 +248,16 @@ bindsym $mod+r mode "resize"
 
 # Audio bindings, and piping into volnoti to display popup
     bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle && if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then volnoti-show -m; else volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -1); fi"
-    bindsym XF86AudioRaiseVolume exec  "pactl set-sink-volume @DEFAULT_SINK@ +5% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
-    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
+    bindsym XF86AudioRaiseVolume exec  "pactl set-sink-volume @DEFAULT_SINK@ +2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
+    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
     bindsym XF86AudioPlay exec playerctl play-pause  
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
 
 # Brightness bindings
-    bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-    bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+    bindsym XF86MonBrightnessDown exec ~/.config/sway/brightness_control.sh down
+    bindsym XF86MonBrightnessUp exec ~/.config/sway/brightness_control.sh up
+
 #
 # swaylock
     bindsym $mod+Shift+p exec swaylock \
