@@ -115,9 +115,9 @@ client.focused          #BD93F9 #BD93F9 #44475A #BD93F9   #BD93F9
     
     # Screenshot specified screen area to clipboard 
     bindsym Print exec grim -g "$(slurp)" - | wl-copy
-    
+  
     # Emoji picker 
-    bindsym $mod+semicolon rofimoji
+    bindsym $mod+semicolon exec rofimoji
     
     # Border manaagement
     default_border pixel 3

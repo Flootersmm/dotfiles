@@ -19,8 +19,9 @@
     },
 	"network": {
 		"tooltip": false,
-		"format-wifi": "  {essid}",
+		"format-wifi": "󰖩 {essid}",
 		"format-ethernet": "",
+    "format-disconnected": "󱚼 ",
     "on-click":"konsole -e nmtui"
 	},
 	"backlight": {
