@@ -58,7 +58,6 @@ fi
 PS1="\[\e[1;38;2;255;121;198m\][\u@\h \W]\$\[\e[0m\] "
 
 # Editor
-export EDITOR=nvim
 alias vi="nvim"
 
 # Beep on asking for sudo 
