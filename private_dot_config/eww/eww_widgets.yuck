@@ -1,13 +1,13 @@
 (defwidget bigpowermenu []
-  (box :orientation "h"
+  (box :orientation "v"
        :space-evenly true
        :class "bigpowermenu"
        :halign "center"
        :valign "center"
-       :spacing 80
-       :onclick "eww close bigpowermenu"  ;; Add this line
-    (button :style "color: #FF5555;" :class "shutdown" :onclick "systemctl poweroff" "")
-    (button :style "color: #FF5555;" :class "reboot" :onclick "systemctl reboot" "")
+       :spacing 20
+       :onclick "eww close bigpowermenu"
+    (button :style "color: #FF5555; border-radius: 3px;" :class "shutdown" :onclick "systemctl poweroff" "")
+    (button :style "color: #FF5555; border-radius: 3px;" :class "reboot" :onclick "systemctl reboot" "")
   )
 )
 

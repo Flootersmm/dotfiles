@@ -5,9 +5,9 @@
   :wm-ignore true
   :monitor 0
   :windowtype "dock"
-  :geometry (geometry :x "0px"
-                      :y "0%"
-                      :width "20%"
-                      :height "10%"
-                      :anchor "center center")
+  :geometry (geometry :x "9px"
+                      :y "9px"
+                      :width "96px"
+                      :height "16%"
+                      :anchor "right top")
 (bigpowermenu))
