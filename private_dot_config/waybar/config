@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","sway/workspaces","tray"],
 	"modules-center": ["custom/spotify"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","clock", "battery","network","custom/power"],
+	"modules-right": ["custom/updates","backlight","pulseaudio","clock","custom/weather","battery","network","custom/power"],
 	
   "sway/workspaces": {
   	"disable-scroll": true,
@@ -106,5 +106,10 @@
     "custom/wallpaper":{
         "format":" ",
         "on-click": "bash ~/.config/system_scripts/pkill_bc"
+    },
+    "custom/weather": {
+      "format": "{}",
+      "exec": "python3 ~/.config/waybar/weather.py",
+      "interval": 3600,
     }
 }

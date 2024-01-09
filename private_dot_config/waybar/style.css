@@ -78,7 +78,7 @@ window#waybar.hidden {
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
-	background: #bd93f9;
+	background: #FF79C6;
 }
 
 #pulseaudio {
@@ -102,7 +102,7 @@ window#waybar.hidden {
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
-	background: #8BE9FD;
+	background: #bd93f9;
 }
 
 #battery.charging, #battery.plugged {
@@ -240,7 +240,7 @@ window#waybar.hidden {
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
-	background: #E8A2AF;
+	background: #FF5555;
 }
 
 #custom-spotify {
@@ -253,6 +253,18 @@ window#waybar.hidden {
 	transition: none;
 	color: #161320;
 	background: #50FA7B;
+}
+
+#custom-weather {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #8BE9FD;
 }
 
 #workspaces {
