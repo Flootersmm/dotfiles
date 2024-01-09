@@ -67,6 +67,8 @@ window#waybar.hidden {
     color: #E8A2AF;
 }
 
+
+
 #network {
 	margin-top: 6px;
 	margin-left: 8px;
@@ -136,6 +138,14 @@ window#waybar.hidden {
 	color: #161320;
 	background: #FFB86C;
 }
+
+#backlight.high { background: #FFB86C }
+#backlight.mid { background: #D89E62 }
+#backlight.low {
+  color: #F8F8F2;
+  background: #282A36;
+}
+
 #clock {
 	margin-top: 6px;
 	margin-left: 8px;
@@ -146,9 +156,7 @@ window#waybar.hidden {
 	transition: none;
 	color: #161320;
 	background: #50FA7B;
-	/*background: #1A1826;*/
 }
-
 #memory {
 	margin-top: 6px;
 	margin-left: 8px;
@@ -160,6 +168,7 @@ window#waybar.hidden {
 	color: #161320;
 	background: #BD93F9;
 }
+
 #cpu {
 	margin-top: 6px;
 	margin-left: 8px;
@@ -244,4 +253,16 @@ window#waybar.hidden {
 	transition: none;
 	color: #161320;
 	background: #50FA7B;
+}
+
+#workspaces {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #44475A;
 }

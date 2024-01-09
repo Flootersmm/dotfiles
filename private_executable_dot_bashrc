@@ -16,7 +16,9 @@ alias ll='exa -la'
 alias grep='grep --color=auto'
 
 # Startup
-tmux new-session -A -s main
+if [ -z "$VIMRUNTIME" ]; then
+  tmux new-session -A -s main
+fi
 eww daemon
 clear
 

@@ -1,33 +1,50 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/spotify","tray"],
-	"modules-center": ["river/tags"],
+	"modules-left": ["custom/launcher","cpu","memory","sway/workspaces","tray"],
+	"modules-center": ["custom/spotify"],
 	"modules-right": ["custom/updates","backlight","pulseaudio","clock", "battery","network","custom/power"],
 	
-	"pulseaudio": {
+  "sway/workspaces": {
+  	"disable-scroll": true,
+  	"all-outputs": false,
+  	"format": "{icon}",
+  	"format-icons": {
+  		"1": "",
+  		"2": "",
+  		"3": "󰙯",
+      "4": "",
+  		"urgent": "",
+  		"focused": "",
+  		"default": ""
+  	}
+  },
+   	"pulseaudio": {
 		"tooltip": false,
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
-		"format-muted": "{icon} gedempt",
+		"format-muted": "{icon} stil",
 		"on-click":"pavucontrol",
 		"format-icons": {
 			"default": ["", "", ""]
 		}
 	},
-    "river/tags": {
-		"num-tags": 6
-    },
 	"network": {
 		"tooltip": false,
 		"format-wifi": "󰖩 {essid}",
 		"format-ethernet": "",
     "format-disconnected": "󱚼 ",
-    "on-click":"konsole -e nmtui"
+    "on-click":"~/.config/waybar/launch_nmtui.sh"
 	},
 	"backlight": {
 		"tooltip": false,
-		"format": " {}%",
-		"interval":1
+		"format": "{icon} {}%",
+    "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+		"interval":1,
+    "states": {
+      "high": 30,
+      "mid": 10,
+      "low": 0
+    },
 	},
     "battery": {
         "states": {
@@ -53,12 +70,14 @@
     "cpu": {
         "interval": 15,
         "format": " {}%",
-        "max-length": 10
+        "max-length": 10,
+        "min-length": 7
     },
     "memory": {
         "interval": 30,
         "format": " {}%",
-        "max-length": 10
+        "max-length": 10,
+        "min-length": 5
     },
     "custom/spotify": {
         "exec": "/usr/bin/python3 /home/conrad/.config/waybar/mediaplayer.py --player spotify",
@@ -75,14 +94,14 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "eww open --toggle bigpowermenu open bigpowermenu",
+        "on-click": "eww open --toggle bigpowermenu",
     },
     "custom/updates":{
         "format": "{} Update(s)",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
         "interval": 15,
-        "on-click": "konsole -e sudo pacman -Syu && notify-send 'The system has been updated' "
+        "on-click": "konsole -e sudo pacman -Syu && notify-send 'Het systeem is bijgewerkt' "
     },
     "custom/wallpaper":{
         "format":" ",

@@ -24,10 +24,10 @@ set $term konsole
 set $menu fuzzel
 
 # Set dark theme for apps to detect 
-exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' 
-exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-exec darkman run
-exec darkman set dark
+exec_always { 
+  gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+}
 
 # Start Volnoti for volume notifications
 exec volnoti
@@ -252,7 +252,7 @@ bindsym $mod+r mode "resize"
     bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle && if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then volnoti-show -m; else volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -1); fi"
     bindsym XF86AudioRaiseVolume exec  "pactl set-sink-volume @DEFAULT_SINK@ +2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
     bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
-    bindsym XF86AudioPlay exec playerctl play-pause  
+    bindsym --locked XF86AudioPlay exec playerctl play-pause  
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
 
@@ -314,6 +314,8 @@ for_window {
 [window_role="bubble"] floating enable
 [window_role="dialog"] floating enable
 [window_type="dialog"] floating enable
+[title="NMTUI"] floating enable
+
 }
 
 include /etc/sway/config.d/*
