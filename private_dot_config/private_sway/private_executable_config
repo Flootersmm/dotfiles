@@ -48,7 +48,8 @@ exec swaymsg "workspace 3; exec whatsdesk"
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/conrad/Wallpapers/wallpaper.jpg fit
+# output * bg /home/conrad/Wallpapers/wallpaper.jpg fit
+exec ~/.config/sway/wallpaper.sh
 
 # Swayfx configs
 blur enable
