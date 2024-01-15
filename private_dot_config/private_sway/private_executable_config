@@ -249,17 +249,28 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Audio bindings, and piping into volnoti to display popup
-    bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle && if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then volnoti-show -m; else volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -1); fi"
-    bindsym XF86AudioRaiseVolume exec  "pactl set-sink-volume @DEFAULT_SINK@ +2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
-    bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
-    bindsym --locked XF86AudioPlay exec playerctl play-pause  
-    bindsym XF86AudioNext exec playerctl next
-    bindsym XF86AudioPrev exec playerctl previous
+#   bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle && if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then volnoti-show -m; else volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -1); fi"
+#   bindsym XF86AudioRaiseVolume exec  "pactl set-sink-volume @DEFAULT_SINK@ +2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
+#   bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2% && volnoti-show $(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+%' | head -1)"
+#   bindsym --locked XF86AudioPlay exec playerctl play-pause  
+#   bindsym XF86AudioNext exec playerctl next
+#   bindsym XF86AudioPrev exec playerctl previous
 
 # Brightness bindings
     bindsym XF86MonBrightnessDown exec ~/.config/sway/brightness_control.sh down
     bindsym XF86MonBrightnessUp exec ~/.config/sway/brightness_control.sh up
 
+#
+# Audio bingings, and piping into wob to display popup 
+#
+  set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+  exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+
+  bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2% && pactl get-sink-volume @DEFAULT_SINK@ | awk 'NR==1{print substr($5,1,length($5)-1)}' > $WOBSOCK
+  bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2% && pactl get-sink-volume @DEFAULT_SINK@ | awk 'NR==1{print substr($5,1,length($5)-1)}' > $WOBSOCK
+  bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && ( [ "$(pactl get-sink-mute @DEFAULT_SINK@)" = "Mute: yes" ] && echo 0 > $WOBSOCK ) || pactl get-sink-volume @DEFAULT_SINK@ | awk 'NR==1{print substr($5,1,length($5)-1)}' > $WOBSOCK
+#
+#
 #
 # swaylock
     bindsym $mod+Shift+p exec swaylock \
