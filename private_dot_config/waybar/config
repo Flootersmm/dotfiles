@@ -110,6 +110,6 @@
     "custom/weather": {
       "format": "{}",
       "exec": "python3 ~/.config/waybar/weather.py",
-      "interval": 3600,
+      "interval": 600,
     }
 }
