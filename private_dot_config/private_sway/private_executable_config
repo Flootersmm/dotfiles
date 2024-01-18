@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+include "$HOME/.cache/wal/colors-sway"
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -45,11 +47,15 @@ exec swaymsg "workspace 1; exec firefox"
 exec swaymsg "workspace 3; exec discord"
 exec swaymsg "workspace 3; exec whatsdesk"
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# Output configuration
 # output * bg /home/conrad/Wallpapers/wallpaper.jpg fit
-exec ~/.config/sway/wallpaper.sh
+# exec ~/.config/sway/wallpaper.sh
+
+# Dynamic colour scheme from wallpaper, but doesn't really work rn
+# exec wal -i "/home/conrad/Wallpapers"
+exec ~/.config/sway/sway_wal.sh
+output * bg $wallpaper fit
+client.focused $color0 $background $foreground $color7 $background
 
 # Swayfx configs
 blur enable
@@ -63,7 +69,7 @@ shadows enable
 gaps inner 6
 gaps outer 3
 
-client.focused          #BD93F9 #BD93F9 #44475A #BD93F9   #BD93F9
+# client.focused          #BD93F9 #BD93F9 #44475A #BD93F9   #BD93F9
 
 # Example configuration:
 #

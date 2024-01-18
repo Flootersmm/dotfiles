@@ -105,7 +105,7 @@
     },
     "custom/wallpaper":{
         "format":" ",
-        "on-click": "bash ~/.config/system_scripts/pkill_bc"
+        "on-click": "~/.config/sway/sway_wal.sh -e"
     },
     "custom/weather": {
       "format": "{}",
