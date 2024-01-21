@@ -24,3 +24,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     pattern = "*",
     command = "highlight Normal ctermbg=NONE guibg=NONE",
 })
+
+vim.defer_fn(function()
+    vim.cmd([[colorscheme mbc]])
+end, 1)
