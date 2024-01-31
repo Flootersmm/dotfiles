@@ -62,6 +62,8 @@ PS1="\[\e[1;38;2;255;121;198m\]\w 󰥭\[\e[0m\] "
 
 # Editor
 alias vi="nvim"
+# Allow nvim --server /tmp/nvim.pipe --remote-send
+alias nvim="nvim --listen /tmp/nvim.pipe"
 
 # Beep on asking for sudo 
 SUDO_PROMPT=$'\a'"[sudo] password for %p: "

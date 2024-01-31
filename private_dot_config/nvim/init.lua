@@ -20,11 +20,15 @@ dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
+vim.defer_fn(function()
+    vim.cmd([[colorscheme mbc]])
+    vim.cmd([[highlight Normal ctermbg=NONE guibg=NONE]])
+end, 1)
+
+
 vim.api.nvim_create_autocmd("VimEnter", {
     pattern = "*",
     command = "highlight Normal ctermbg=NONE guibg=NONE",
 })
 
-vim.defer_fn(function()
-    vim.cmd([[colorscheme mbc]])
-end, 1)
+

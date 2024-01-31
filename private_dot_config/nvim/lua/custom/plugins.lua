@@ -67,7 +67,9 @@ local plugins = {
         "codelldb",
         "typescript-language-server",
         "prettier",
-        "js-debug-adapter"
+        "js-debug-adapter",
+        "pyright",
+        "ltex-ls"
       }
     }
   }

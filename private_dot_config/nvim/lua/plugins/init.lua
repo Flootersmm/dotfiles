@@ -256,6 +256,17 @@ local default_plugins = {
     end,
   },
 
+   {
+    "lervag/vimtex",
+    lazy=false,
+    init=function ()
+    vim.g.vimtex_view_method = 'zathura'
+    vim.g.vimtex_syntax_enabled = 0
+    vim.g.vimtex_compiler_method = 'latexrun'
+    vim.g.vimtex_compiler_silent = 1
+  end
+  },
+
   -- Only load whichkey after all the gui
   {
     "folke/which-key.nvim",
