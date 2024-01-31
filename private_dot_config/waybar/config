@@ -71,13 +71,15 @@
         "interval": 15,
         "format": " {}%",
         "max-length": 10,
-        "min-length": 7
+        "min-length": 7,
+        "on-click": "~/.config/waybar/launch_btop.sh",
     },
     "memory": {
         "interval": 30,
         "format": " {}%",
         "max-length": 10,
-        "min-length": 5
+        "min-length": 5,
+        "on-click": "~/.config/waybar/launch_btop.sh",
     },
     "custom/spotify": {
         "exec": "/usr/bin/python3 /home/conrad/.config/waybar/mediaplayer.py --player spotify",
