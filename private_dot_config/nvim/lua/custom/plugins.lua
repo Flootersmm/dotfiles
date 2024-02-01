@@ -69,7 +69,8 @@ local plugins = {
         "prettier",
         "js-debug-adapter",
         "pyright",
-        "ltex-ls"
+        "ltex-ls",
+        "asm-lsp",
       }
     }
   }

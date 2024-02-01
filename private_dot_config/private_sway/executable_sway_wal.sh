@@ -15,6 +15,9 @@ while true; do
   # Remote send command to update nvim colour scheme
   nvim --server /tmp/nvim.pipe --remote-send '<ESC><ESC>:colorscheme mbc<ENTER>'
   nvim --server /tmp/nvim.pipe --remote-send '<ESC><ESC>:highlight Normal ctermbg=NONE guibg=NONE<ENTER>'
+  
+  # Update Firefox theme
+  pywalfox update
 
   sleep 3600
 done
