@@ -75,7 +75,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color6;
@@ -87,7 +87,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color2;
@@ -99,7 +99,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color5;
@@ -134,7 +134,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color1;
@@ -157,7 +157,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color3;
@@ -168,7 +168,7 @@ window#waybar.hidden {
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color10;
@@ -180,7 +180,7 @@ window#waybar.hidden {
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color9;
@@ -192,7 +192,7 @@ window#waybar.hidden {
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: #b5e8e0;
   background: @background;
@@ -204,9 +204,9 @@ window#waybar.hidden {
   margin-left: 8px;
   padding-left: 10px;
   padding-right: 5px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
-  color: #89dceb;
+  color: @foreground;
   background: @color12;
 }
 
@@ -218,7 +218,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 5px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color7;
@@ -230,7 +230,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: #c9cbff;
@@ -242,7 +242,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: #ff5555;
@@ -254,7 +254,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color8;
@@ -266,7 +266,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color4;
@@ -278,7 +278,7 @@ window#waybar.hidden {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: none;
   color: @color0;
   background: @color11;

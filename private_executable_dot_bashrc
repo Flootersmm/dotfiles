@@ -67,3 +67,6 @@ alias nvim="nvim --listen /tmp/nvim.pipe"
 
 # Beep on asking for sudo 
 SUDO_PROMPT=$'\a'"[sudo] password for %p: "
+
+eval "$(starship init bash)"
+
