@@ -30,6 +30,14 @@ chezpush() {
     git commit -m "$*"
     git push
     cd "$current_dir"
+    return 0
+}
+
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+    return 0
 }
 
 # Bash prompt
@@ -44,3 +52,5 @@ alias nvim="nvim --listen /tmp/nvim.pipe"
 eval "$(zoxide init --cmd cd bash)"
 
 eval "$(starship init bash)"
+
+eval "$(thefuck --alias)"

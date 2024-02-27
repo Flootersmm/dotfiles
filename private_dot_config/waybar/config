@@ -45,6 +45,7 @@
       "mid": 10,
       "low": 0
     },
+    "on-click":"~/.config/sway/brightness_toggle.sh"
 	},
     "battery": {
         "states": {
