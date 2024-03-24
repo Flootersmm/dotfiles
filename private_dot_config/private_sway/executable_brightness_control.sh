@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Function to decrease brightness
 decrease_brightness() {
     current_brightness=$(xbacklight -get | cut -d '.' -f 1)
     if [ "$current_brightness" -le 5 ]; then
@@ -14,7 +13,6 @@ decrease_brightness() {
     fi
 }
 
-# Function to increase brightness
 increase_brightness() {
     current_brightness=$(xbacklight -get | cut -d '.' -f 1)
     if [ "$current_brightness" -eq 0 ]; then
@@ -26,7 +24,6 @@ increase_brightness() {
     fi
 }
 
-# Main
 case "$1" in
     up)
         increase_brightness

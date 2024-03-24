@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to set brightness to 1% or 100%, toggling between extremes
+# Set brightness to 1% or 100%, toggling between extremes
 toggle_brightness() {
     current_brightness=$(xbacklight -get | cut -d '.' -f 1)
     if [ "$current_brightness" -eq 1 ]; then

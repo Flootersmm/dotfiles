@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","sway/workspaces","tray"],
 	"modules-center": ["custom/spotify"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","clock","custom/weather","battery","network","custom/power"],
+	"modules-right": ["custom/updates","backlight","pulseaudio","battery","custom/weather","clock","network","custom/power"],
 	
   "sway/workspaces": {
   	"disable-scroll": true,
@@ -64,9 +64,9 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": "{: %H:%M   %Y/%m/%d}",
+        "format": " {:%H:%M   %m/%d}",
         "tooltip": "true",
-        "tooltip-format": "{:%A}"
+        "tooltip-format": "{:%A}",
     },
     "cpu": {
         "interval": 15,
@@ -97,7 +97,7 @@
     },
     "custom/power":{
         "format": " ",
-        "on-click": "eww open --toggle bigpowermenu",
+        "on-click": "eww open --toggle powermenu",
     },
     "custom/updates":{
         "format": "{} Update(s)",
