@@ -1,9 +1,9 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","sway/workspaces","tray"],
-	"modules-center": ["custom/spotify"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","battery","custom/weather","clock","network","custom/power"],
-	
+	"modules-left": ["custom/launcher","custom/bgr2","custom/bgl2","cpu","custom/bgr2","custom/bgl2","memory","custom/bgr2","custom/bgl2","sway/workspaces","custom/bgr2","custom/bgl2","tray","custom/bgr2","custom/scratchpad-indicator"],
+	"modules-center": ["custom/bgl","custom/spotify","custom/bgr2"],
+	"modules-right": ["custom/updates","custom/bgl","backlight","custom/bgr","custom/bgl","pulseaudio","custom/bgr","custom/bgl","battery","custom/bgr","custom/bgl","custom/weather","custom/bgr","custom/bgl","clock","custom/bgr","custom/bgl","network","custom/bgr","custom/bgl","custom/power"],
+
   "sway/workspaces": {
   	"disable-scroll": true,
   	"all-outputs": false,
@@ -66,7 +66,19 @@
     "clock": {
         "format": " {:%H:%M   %m/%d}",
         "tooltip": "true",
-        "tooltip-format": "{:%A}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
     },
     "cpu": {
         "interval": 15,
@@ -114,5 +126,25 @@
       "format": "{}",
       "exec": "python3 ~/.config/waybar/weather.py",
       "interval": 600,
+    },
+    "custom/scratchpad-indicator": {
+        "interval": 10,
+        "return-type": "json",
+        "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '(recurse(.nodes[]) | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | if ($scratch_nodes|length) > 0 then { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") } else empty end'",
+        "format": "󱂬 {}",
+        "on-click": "exec swaymsg 'scratchpad show'",
+        "on-click-right": "exec swaymsg 'move scratchpad'"
+    },
+    "custom/bgl": {
+      "format": "",
+    },
+    "custom/bgr": {
+      "format": "",
+    },
+    "custom/bgr2": {
+      "format": "",
+    },
+    "custom/bgl2": {
+      "format": "",
     }
 }
