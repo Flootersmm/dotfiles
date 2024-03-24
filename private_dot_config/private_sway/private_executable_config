@@ -37,14 +37,14 @@ exec ~/.config/sway/sway_wal.sh
 output * bg $wallpaper fit
 
 # Focused window with wal colours
-client.focused $foreground $background $foreground $color7 $background
+client.focused $foreground $color6 $foreground $color7 $foreground
 
 # Swayfx configs
 blur enable
 blur_xray enable
 blur_passes 2
 blur_radius 10
-corner_radius 4
+corner_radius 10
 shadows enable
 gaps inner 6
 gaps outer 3

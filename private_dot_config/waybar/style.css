@@ -17,7 +17,7 @@ window#waybar.hidden {
 }
 
 #window {
-  margin-top: 6px;
+  margin-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
@@ -77,8 +77,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color6;
+  color: @foreground;
+  background: @background;
 }
 
 #pulseaudio {
@@ -89,8 +89,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color2;
+  color: @foreground;
+  background: @background;
 }
 
 #battery {
@@ -101,14 +101,14 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color5;
+  color: @foreground;
+  background: @background;
 }
 
 #battery.charging,
 #battery.plugged {
   color: @color0;
-  background-color: @color5;
+  background-color: @background;
 }
 
 #battery.critical:not(.charging) {
@@ -136,19 +136,19 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color1;
+  color: @foreground;
+  background: @background;
 }
 
 #backlight.high {
-  background: @color1;
+  background: @background;
 }
 #backlight.mid {
-  background: @color13;
+  background: @background;
 }
 #backlight.low {
-  color: #f8f8f2;
-  background: @color14;
+  color: @background;
+  background: @foreground;
 }
 
 #clock {
@@ -159,8 +159,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color3;
+  color: @foreground;
+  background: @background;
 }
 #memory {
   margin-top: 6px;
@@ -170,8 +170,8 @@ window#waybar.hidden {
   padding-right: 10px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color10;
+  color: @foreground;
+  background: @background;
 }
 
 #cpu {
@@ -182,8 +182,8 @@ window#waybar.hidden {
   padding-right: 10px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color9;
+  color: @foreground;
+  background: @background;
 }
 
 #tray {
@@ -207,7 +207,7 @@ window#waybar.hidden {
   border-radius: 20px;
   transition: none;
   color: @foreground;
-  background: @color12;
+  background: @background;
 }
 
 #custom-power {
@@ -220,8 +220,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color7;
+  color: @foreground;
+  background: @background;
 }
 
 #custom-wallpaper {
@@ -232,8 +232,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: #c9cbff;
+  color: @foreground;
+  background: @background;
 }
 
 #custom-updates {
@@ -244,8 +244,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: #ff5555;
+  color: @foreground;
+  background: @background;
 }
 
 #custom-spotify {
@@ -256,8 +256,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color8;
+  color: @foreground;
+  background: @background;
 }
 
 #custom-weather {
@@ -268,8 +268,8 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color4;
+  color: @foreground;
+  background: @background;
 }
 
 #workspaces {
@@ -280,6 +280,6 @@ window#waybar.hidden {
   margin-bottom: 0px;
   border-radius: 20px;
   transition: none;
-  color: @color0;
-  background: @color11;
+  color: @foreground;
+  background: @background;
 }
