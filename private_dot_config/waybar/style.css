@@ -17,10 +17,9 @@ window#waybar.hidden {
 }
 
 .module {
-  margin-top: 0px;
+  margin-top: 6px;
   padding-left: 0px;
   padding-right: 0px;
-  border-radius: 0px;
   transition: none;
 }
 
@@ -78,47 +77,41 @@ window#waybar.hidden {
 }
 
 #network {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
   border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #pulseaudio {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
   border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #battery {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: @foreground;
-  background-color: @background;
+  color: @color5;
+  background-color: #1a1b26;
 }
 
 #battery.critical:not(.charging) {
-  background-color: @foreground;
-  color: @background;
+  background-color: @color5;
+  color: #1a1b26;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -128,186 +121,146 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: @background;
-    color: @foreground;
+    background-color: #1a1b26;
+    color: @color5;
   }
 }
 
 #backlight {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #backlight.high {
-  background: @background;
+  background: #1a1b26;
 }
 #backlight.mid {
-  background: @background;
+  background: #1a1b26;
 }
 #backlight.low {
-  color: @background;
-  background: @foreground;
+  color: #1a1b26;
+  background: @color5;
 }
 
 #clock {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 #memory {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #cpu {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #tray {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-launcher {
-  font-size: 24px;
-  margin-top: 0px;
+  font-size: 22px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-power {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-wallpaper {
-  margin-top: 0px;
   margin-left: 8px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 20px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-scratchpad-indicator {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-updates {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-spotify {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-weather {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
   transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #workspaces {
-  margin-top: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 0px;
-  transition: none;
-  color: @foreground;
-  background: @background;
+  color: @color5;
+  background: #1a1b26;
 }
 
 #custom-bgl {
-  font-size: 24px;
-  color: @background;
+  font-size: 1.8em;
+  color: #1a1b26;
   background: transparent;
 }
 
 #custom-bgr {
-  font-size: 24px;
-  color: @background;
+  font-size: 1.8em;
+  color: #1a1b26;
   background: transparent;
 }
 
 #custom-bgl2 {
-  font-size: 24px;
-  color: @background;
+  font-size: 1.8em;
+  color: #1a1b26;
   background: transparent;
 }
 
 #custom-bgr2 {
-  font-size: 24px;
-  color: @background;
+  font-size: 1.8em;
+  color: #1a1b26;
   background: transparent;
 }
