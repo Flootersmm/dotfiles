@@ -136,15 +136,19 @@
         "on-click-right": "exec swaymsg 'move scratchpad'"
     },
     "custom/bgl": {
+		  "tooltip": false,
       "format": "",
     },
     "custom/bgr": {
+		  "tooltip": false,
       "format": "",
     },
     "custom/bgr2": {
+		  "tooltip": false,
       "format": "",
     },
     "custom/bgl2": {
+		  "tooltip": false,
       "format": "",
     }
 }

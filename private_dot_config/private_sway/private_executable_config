@@ -33,7 +33,7 @@ exec swaymsg "workspace 3; exec discord"
 exec swaymsg "workspace 3; exec whatsdesk"
 
 # Wal integration script
-exec ~/.config/sway/sway_wal.sh
+exec ~/.config/sway/switch_wallpaper.sh
 output * bg $wallpaper fit
 
 # Focused window with wal colours
@@ -59,6 +59,7 @@ input "type:touchpad" {
 }
 
 # Bindings
+    bindsym $mod+w exec ~/.config/sway/switch_wallpaper.sh
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+n exec swaync-client -t -sw
     bindsym $mod+Shift+q kill
@@ -129,7 +130,6 @@ input "type:touchpad" {
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
     bindsym $mod+p layout toggle split
 
     # Make the current focus fullscreen
