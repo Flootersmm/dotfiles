@@ -1,11 +1,32 @@
 #!/bin/bash
 
+### Iterate through wallpapers
+
+wallpaper_dir=~/Wallpapers/
+index_file=~/.cache/current_wallpaper_index
+
+index=$(cat "$index_file" 2>/dev/null || echo 0)
+
+wallpapers=($(find "$wallpaper_dir" -type f))
+
+num_wallpapers=${#wallpapers[@]}
+
+wallpaper=${wallpapers[$index]}
+
+((index++))
+
+if [ $index -ge $num_wallpapers ]; then
+    index=0
+fi
+
+echo $index > "$index_file"
+
+### Switch wallpapers, set themes
 
 # sway itself execs swaybg so we do have an unused swaygb 
 # process at all times but no biggie
-pkill -f "swaybg"
 
-wallpaper=$(find ~/Wallpapers/ -type f | shuf -n1)
+pkill -f "swaybg"
 
 wal -i "$wallpaper" &
 
