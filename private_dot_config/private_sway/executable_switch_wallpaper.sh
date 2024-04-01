@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# We can use wallpaper indices for a nice gui switcher perhaps
+
 ### Iterate through wallpapers
 
 wallpaper_dir=~/Wallpapers/
